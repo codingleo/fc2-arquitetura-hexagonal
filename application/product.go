@@ -91,7 +91,7 @@ func (p *Product) Enable() error {
 }
 
 func (p *Product) ChangePrice(price float64) error {
-	if p.Price < 0 {
+	if price < 0 {
 		return errors.New("price only accept positive numbers")
 	}
 	p.Price = price
